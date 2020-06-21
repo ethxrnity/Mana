@@ -25,11 +25,16 @@ module.exports = {
       text: "Request from: " + message.author.username
        }
 }});
-
+    
     let mana = new RichEmbed()
-    .setDescription("")
+    .setDescription("<a:Verify:708749864191655937> Status was successfully updated!")
+    .setColor("#576bff")
+    .setFooter("Request from: " + message.author.username, message.author.avatarURL)
+    .setTimestamp();
+    
+    message.channel.send(mana)
 
-    if(args[0] == "online") return client.user.setStatus("online");
+    if(args[0] == "online") return client.user.setStatus("online"); 
 
     if(args[0] == "invisible") return client.user.setStatus("invisible");
 
