@@ -22,9 +22,17 @@ const userurl = message.author.avatarURL;
 let mana = new RichEmbed()
     .setColor("#576bff")
     .setThumbnail(client.user.avatarURL)
-    .addField(`Bot information`, stripIndents`Developer: <@574849327650963469>
-    Support server: [LINK](https://discord.gg/K83U2aC)
-    Invite link: [LINK](https://discord.com/oauth2/authorize?client_id=588450296955535389&scope=bot&permissions=1345715264)`)
+    .setDescription("<a:allthese100s:722375406749220885> Are you looking for a new and high-quality bot for your Discord server? **[Invite](https://discord.gg/K83U2aC)** Mana right now to your Discord server! \n\n<:Bug:722199787117477911> If any problem, bug, power cut or new idea occurs, contact the Developer: <@574849327650963469> or join our **[Support Server](https://discord.gg/XAxGtXA)**.\n")
+    .addField(`Important information`, stripIndents`
+    Developer: <@574849327650963469>
+    Support server: **[INVITE](https://discord.gg/K83U2aC)**
+    Invite link: **[LINK](https://discord.com/oauth2/authorize?client_id=588450296955535389&scope=bot&permissions=1345715264)**`, true)
+    .addField(`Bot information`, stripIndents`
+    Discord.js version: **12.0.1**
+    Node.js version: **12.x**
+    Created at: **6/12/2019**
+    Commands: **35**`, true)
+
     .setFooter(useruser, userurl)
     .setTimestamp()
 
