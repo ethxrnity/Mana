@@ -4,9 +4,9 @@ const client = require('nekos.life');
 const neko = new client();
 
 module.exports = {
-  name: "kiss",
+  name: "cuddle",
   category: "anime",
-  description: "Will kiss a specific user!",
+  description: "Will cuddle a specific user!",
   run: async (client, message, args) => {
            const member = getMember(message, args.join(" "));
            const msg = await message.channel.send({embed: {
@@ -30,11 +30,11 @@ if(!user) return message.channel.send({embed: {
        }
 }});
 
-    var kiss = await neko.sfw.kiss()
+    var cuddle = await neko.sfw.cuddle()
 
 let mana = new RichEmbed()
-.setTitle(`${message.member.displayName} kissed ${member.displayName}`)
-.setImage(kiss.url)
+.setTitle(`${message.member.displayName} cuddled ${member.displayName}`)
+.setImage(cuddle.url)
 .setColor("#576bff")
 .setFooter("Request from: " + message.author.username, message.author.avatarURL)
 .setTimestamp();

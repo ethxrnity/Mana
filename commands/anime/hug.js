@@ -20,13 +20,21 @@ module.exports = {
 }}).then(m => m.delete(1999));
 
 let user = message.mentions.users.first();
-if(!user) return message.reply("Please mention user who you want to ban first!");
+if(!user) return message.channel.send({embed: {
+  color: 5729279,
+  description: "<a:BootyShake:725465988728094822> Please mention the user and then resubmit the command!",
+  timestamp: new Date(),
+    footer: {
+      icon_url: message.author.avatarURL,
+      text: "Request from: " + message.author.username
+       }
+}});
 
-    var Huggif = await neko.sfw.hug()
+    var hug = await neko.sfw.hug()
 
 let mana = new RichEmbed()
 .setTitle(`${message.member.displayName} hugged ${member.displayName}`)
-.setImage(Huggif.url)
+.setImage(hug.url)
 .setColor("#576bff")
 .setFooter("Request from: " + message.author.username, message.author.avatarURL)
 .setTimestamp();

@@ -4,9 +4,9 @@ const client = require('nekos.life');
 const neko = new client();
 
 module.exports = {
-  name: "kiss",
+  name: "waifu",
   category: "anime",
-  description: "Will kiss a specific user!",
+  description: "Will send a hot waifu",
   run: async (client, message, args) => {
            const member = getMember(message, args.join(" "));
            const msg = await message.channel.send({embed: {
@@ -19,22 +19,12 @@ module.exports = {
        }
 }}).then(m => m.delete(1999));
 
-let user = message.mentions.users.first();
-if(!user) return message.channel.send({embed: {
-  color: 5729279,
-  description: "<a:BootyShake:725465988728094822> Please mention the user and then resubmit the command!",
-  timestamp: new Date(),
-    footer: {
-      icon_url: message.author.avatarURL,
-      text: "Request from: " + message.author.username
-       }
-}});
 
-    var kiss = await neko.sfw.kiss()
+    var waifu = await neko.sfw.waifu()
 
 let mana = new RichEmbed()
-.setTitle(`${message.member.displayName} kissed ${member.displayName}`)
-.setImage(kiss.url)
+.setDescription(`What a disappointment... <:KyaruScream:725451208097267903>`)
+.setImage(waifu.url)
 .setColor("#576bff")
 .setFooter("Request from: " + message.author.username, message.author.avatarURL)
 .setTimestamp();
